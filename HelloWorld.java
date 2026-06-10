@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class HelloWorld {
@@ -85,7 +84,7 @@ public class HelloWorld {
 
         // Increment/Decrement operators
 
-         int value = 9;
+        int value = 9;
         int result = value++;
 
         System.out.println(value);
@@ -219,6 +218,13 @@ public class HelloWorld {
             System.out.println(i);
         }
 
+        for (int f = 1; f <= 20; f++){
+           
+            if(f % 2 == 0)continue;
+            System.out.println(f);
+        }
+
+
        // while loop
         
         int j = 10;
@@ -229,7 +235,46 @@ public class HelloWorld {
         }
 
 
-        // final Array arrCar = [Toyota, Hyundai, BMW, Ferrari, Porsche];
+           // do-while loop
+
+           Scanner input4 = new Scanner(System.in);
+
+           int choice;
+           do{
+              System.out.println("1. New Game  2. Settings  3. Exit");
+              System.out.print("Enter Choice : ");
+              choice = input4.nextInt();
+
+             if(choice == 1){
+                 System.out.println("Welcome!, let's play a game");
+             }else if(choice == 2){
+                 System.out.println("What settings would you like to change?");
+             }else if(choice == 3){
+                 System.out.println("EXiting Game.....");
+                 System.out.println("Goodbye!");
+             }else{
+                System.out.println("You entered a wrong input");
+             }
+           } while (choice != 3);
+
+
+        //Nested loop
+
+        for(int r = 1; r <= 10; r++){
+            for(int k = 1; k <= 10; k++){
+                System.out.printf("%4d", r * k);
+            }
+            System.out.println();
+        }
+
+        
+        // Array
+        
+        String[] arrCar = {"BMW", "Toyota", "Lamboghini", "Dodge", "Mercedes Benz"};
+        
+          for(String arr: arrCar){
+              System.out.println(arr);
+          }
 
         
     }

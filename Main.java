@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
@@ -48,8 +49,20 @@ public class Main {
         
 
         System.out.println("count = " + count3);
-    
 
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a number : ");
+
+        int checker = input.nextInt();
+
+        if(checker % 2 == 0){
+            System.out.println("The number you entered is an even number : " + checker);
+        }else{
+            System.out.println("The number you entered is an odd number : " + checker);
+        }
+
+        input.close();
         
     }
 }
